@@ -1,0 +1,51 @@
+{
+  "name": "techecosystem/parsify-php",
+  "description": "A PHP library for Persian text conversion, including number translation, diacritics removal, and normalization with a fluent API.",
+  "keywords": [
+    "php",
+    "persian",
+    "text conversion",
+    "number translation",
+    "diacritics removal",
+    "text normalization",
+    "php library",
+    "text utilities",
+    "fluent API"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "homepage": "https://github.com/techecosystem/parsify-php",
+  "authors": [
+    {
+      "name": "Griffin T-3H",
+      "email": "griffin0t03h@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.5",
+    "friendsofphp/php-cs-fixer": "^3.67"
+  },
+  "autoload": {
+    "psr-4": {
+      "Parsify\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Test\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit --colors=always",
+    "coverage": "XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-html build/coverage",
+    "cs-fix": "vendor/bin/php-cs-fixer fix --allow-risky=yes --diff --ansi --using-cache=no",
+    "cs-check": "vendor/bin/php-cs-fixer fix --allow-risky=yes --diff --ansi --using-cache=no --dry-run",
+    "checks": [
+      "@cs-fix",
+      "@test"
+    ]
+  }
+}
