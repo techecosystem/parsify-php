@@ -137,8 +137,8 @@ class PersianConverterTest extends TestCase
             ->withNumberConversion(keepEnglishNumbers: true)
             ->build();
 
-        $input = 'Hello123 سلام٤٥٦ يك';
-        $expected = 'Hello123 سلام456 یک';
+        $input = 'Hello123 سلام ۷۸۹ ٤٥٦ يك';
+        $expected = 'Hello123 سلام 789 456 یک';
         $this->assertEquals($expected, $converter->convert($input));
     }
 

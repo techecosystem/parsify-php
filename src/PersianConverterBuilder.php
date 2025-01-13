@@ -92,6 +92,11 @@ class PersianConverterBuilder
                     NumberType::ENGLISH,
                     NumberType::PERSIAN
                 );
+            } else {
+                $this->strategies[] = new NumberConversionStrategy(
+                    NumberType::PERSIAN,
+                    NumberType::ENGLISH
+                );
             }
             $this->strategies[] = new NumberConversionStrategy(
                 NumberType::ARABIC,
